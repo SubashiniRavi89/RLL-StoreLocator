@@ -1,0 +1,48 @@
+package pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class DemoStoreLocatorPage {
+	
+	
+	@FindBy(xpath="//li[@class='logreg']/child::span[1]")
+	static WebElement LoginLink;
+	
+	@FindBy(xpath="//input[@id='lemail']")
+	static WebElement EmailLink;
+	
+	
+	@FindBy(xpath="//div[@class='B14_white comm-btn btn-login-continue btn-login-cont-otp']")
+	static WebElement ContinueBTN;
+	
+	@FindBy(xpath="//div[@class='B14_white comm-btn btn-login-continue']")
+	static WebElement SubmitBTN;
+	
+	
+	
+	
+	
+	
+	
+	public void clickLoginLink()
+	{
+		LoginLink.click();
+	}
+	
+	public void sendkeysEmailLink(String EmailId)
+	{
+		EmailLink.sendKeys(EmailId);
+	}
+	
+	public void continueButton()
+	{
+		ContinueBTN.click();
+	}
+	
+	public void submitButton()
+	{
+		SubmitBTN.click();
+	}
+
+}
